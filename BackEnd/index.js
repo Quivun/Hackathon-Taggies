@@ -11,12 +11,9 @@ app.get('/', (req, res) => {
 })
 */
 
-app.use(express.static("../FrontEnd"))
+app.use(express.static(path.join(__dirname, "../FrontEnd")))
 
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
-
-
-
