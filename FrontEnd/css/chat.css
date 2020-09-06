@@ -217,16 +217,16 @@ body {
 
 
 .you-message .message-text{
-	background: #610808;
+	background: #A52A2A;
 	color: #eee;
 	border: 1px solid black;
 	border-radius: 14px 14px 0 14px;
 }
 
 .other-message .message-text{
-	background: #eee;
+	background: rgba(238, 238, 238, 0.87);
 	color: #111;
-	border: 1px solid #ddd;
+	border: 1px solid black;
 	border-radius: 14px 14px 14px 0;
 }
 
