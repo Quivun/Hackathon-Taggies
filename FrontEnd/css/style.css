@@ -10,7 +10,7 @@
 /* Basic */
 
 	body {
-		background: #222222;
+		background:	#500000; /*Connect with us*/
 	}
 
 		body.loading * {
@@ -27,7 +27,7 @@
 		}
 
 	body, input, select, textarea {
-		color: #555555;
+		color: #0e0c0c;
 		font-family: 'Open Sans', sans-serif;
 		font-size: 12pt;
 		font-weight: 300;
@@ -35,7 +35,7 @@
 	}
 
 	a {
-		color: #82b440;
+		color: 	#0f0e0e;
 		text-decoration: underline;
 	}
 
@@ -143,7 +143,7 @@
 		-ms-appearance: none;
 		appearance: none;
 		background: none;
-		border: solid 1px #82b440;
+		border: solid 1px #500000;
 		color: inherit;
 		display: block;
 		outline: 0;
@@ -156,7 +156,7 @@
 		input[type="password"]:focus,
 		input[type="email"]:focus,
 		textarea:focus {
-			border-color: #82b440;
+			border-color: #500000;
 		}
 
 	input[type="text"],
@@ -361,7 +361,7 @@
 			display: inline-block;
 			padding-right: 1em;
 			font-size: 1.4em;
-			color: #82b440;
+			color: #500000;
 		}
 
 		ul.special-icons p {
@@ -379,7 +379,7 @@
 		}
 
 			table.default tbody tr {
-				border-bottom: solid 1px #82b440;
+				border-bottom: solid 1px #500000;
 			}
 
 			table.default td {
@@ -411,8 +411,8 @@
 		background: none;
 		border-radius: none;
 		border: 2px solid;
-		border-color: #82b440;
-		color: #82b440;
+		border-color: 	#500000;
+		color: 	#500000;
 		cursor: pointer;
 		display: inline-block;
 		padding: 0.90em 1.2em;
@@ -432,7 +432,7 @@
 		input[type="reset"]:hover,
 		input[type="button"]:hover,
 		.button:hover {
-			background: #82b440;
+			background: 	#500000;
 			color: white;
 		}
 
@@ -449,7 +449,7 @@
 			input[type="button"].alt:hover,
 			.button.alt:hover {
 				background: white;
-				color: #82b440;
+				color: 	#500000;
 			}
 
 		input[type="submit"].fit,
@@ -515,7 +515,7 @@
 
 		.wrapper.style3 {
 			padding-bottom: 6em;
-			background: #82b440;
+			background:		#500000;
 			text-align: center;
 			color: white;
 		}
@@ -533,8 +533,8 @@
 			background: white;
 		}
 
-		.wrapper.style5 {
-			background: #82b440;
+		.wrapper.style5 { /*Meet the Team*/
+			background: #836161;
 			text-align: center;
 			color: white;
 		}
@@ -680,7 +680,7 @@
 		#banner h2 {
 			display: inline-block;
 			padding: 0.50em 0.30em;
-			background: #82b440;
+			background: #500000; /*center taggies*/
 			font-size: 3em;
 			font-weight: 400;
 		}
