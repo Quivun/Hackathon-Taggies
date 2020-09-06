@@ -51,7 +51,7 @@ app.post("/getInfo_S",function(request,response){
   // Read all rows from table
   
   // formatting of requests think tanzir terminal exec functions
-  const request = new Request(
+  const request2 = new Request(
     `INSERT INTO Users (Email,Username,Password)   
     VALUES ('${email}','${username}','${password}');`,
 
@@ -65,7 +65,7 @@ app.post("/getInfo_S",function(request,response){
       }
     }
   );
-  connection.execSql(request);
+  connection.execSql(request2);
   }
 });
 
@@ -93,7 +93,7 @@ app.post("/getInfo_S",function(request,response){
     // Read all rows from table
     
     // formatting of requests think tanzir terminal exec functions
-    const request = new Request(
+    const request1 = new Request(
       `UPDATE Users 
       SET 
           Name = '${username}',
@@ -118,7 +118,7 @@ app.post("/getInfo_S",function(request,response){
         }
       }
     );
-  connection.execSql(request);
+  connection.execSql(request1);
   // GO TO THE DATABASE
   }
 });
