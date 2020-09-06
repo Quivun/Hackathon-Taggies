@@ -1,6 +1,6 @@
 const express = require('express')
 var mysql = require('mysql');
-var bodyParser = require('body-parser');
+// var bodyParser = require('body-parser');
 var multer = require('multer');
 // Find express that was installed and refer to it as variable express - Joshi
 const path = require('path')
@@ -19,11 +19,11 @@ app.get('/', (req, res) => {
 
 
 // for parsing application/json
-app.use(bodyParser.json()); 
+// app.use(bodyParser.json()); 
 
 
 // for parsing application/xwww-
-app.use(bodyParser.urlencoded({ extended: true })); 
+// app.use(bodyParser.urlencoded({ extended: true })); 
 //form-urlencoded
 
 // for parsing multipart/form-data
