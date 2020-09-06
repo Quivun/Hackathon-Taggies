@@ -65,6 +65,9 @@ app.post("/getInfo_S",function(request,response){
       }
     }
   );
+  connection.execSql(request);
+  }
+});
 
   app.post("/getInfo_C",function(request,response){
     console.log("Create Profile Taken");
@@ -184,6 +187,6 @@ function queryDatabase() {
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
   console.log(`Example app listening at Port :${port}`)
-})
+});
 
 
