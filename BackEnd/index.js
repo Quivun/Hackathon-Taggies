@@ -118,7 +118,7 @@ app.post("/getInfo_S",function(request,response){
   connection.execSql(request);
   // GO TO THE DATABASE
   }
-})
+});
 
 
 
