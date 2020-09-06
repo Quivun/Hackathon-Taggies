@@ -103,7 +103,7 @@ app.post("/getInfo_S",function(request,response){
           Residence = '${living}',
           Interest = '${interest}',
           'Social Media' = '${sm}',
-          Biography = '${bio}',
+          Biography = '${bio}'
 
       WHERE
           Email = '${email}';`,
