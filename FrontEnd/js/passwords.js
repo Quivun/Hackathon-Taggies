@@ -57,7 +57,7 @@ myInput.onkeyup = function() {
     length.classList.add("invalid");
   }
 }
-
+/*
 function Validate() {
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirm_password").value;
@@ -66,6 +66,17 @@ function Validate() {
         return false;
     }
     return true;
+} */
+
+var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
 }
 
 </script>
