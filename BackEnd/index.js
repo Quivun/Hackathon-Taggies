@@ -71,7 +71,7 @@ app.post("/getInfo_S",function(request,response){
     var email = request.body.email;
     var name = request.body.name_myText;
     var major = request.body.major_myText;
-    var class = request.body.class_myText;
+    var cla = request.body.class_myText;
     var hometown = request.body.hometown_Text;
     var living = request.body.living_myText;
     var interest = request.body.hobby_myText;
@@ -96,7 +96,7 @@ app.post("/getInfo_S",function(request,response){
       SET 
           Name = '${username}',
           Major = '${major}',
-          Class = '${class}',
+          Class = '${cla}',
           Hometown = '${hometown}',
           Residence = '${living}',
           Interest = '${interest}',
