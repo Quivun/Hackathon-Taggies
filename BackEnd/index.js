@@ -83,7 +83,7 @@ app.post("/getInfo_S",function(request,response){
 
     console.log(request.body);
 
-    if (!(email)||!(name)||!(password)){
+    if (!(email)){
         response.sendStatus(400);
         // Err0r Would modify but it already handles
     } else {
