@@ -448,8 +448,8 @@
 			input[type="reset"].alt:hover,
 			input[type="button"].alt:hover,
 			.button.alt:hover {
-				background: white;
-				color: 	#500000;
+				background: #500000;
+				color: 	white;
 			}
 
 		input[type="submit"].fit,
@@ -465,6 +465,7 @@
 		.button.small {
 			font-size: 0.8em;
 		}
+
 
 /* Wrapper */
 
