@@ -8,7 +8,9 @@ app.get("/", function(request,response){
 
 app.get("/gatemail",function(request,response){
     var eMail = request.query.eMail;
-    if (firstname != ""){
-        
+    var uSername = request.query.uSername;
+    var pAssword = request.query.pAssword;
+    if (eMail != ""){
+
     }
 })

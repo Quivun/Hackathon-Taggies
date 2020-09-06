@@ -1,4 +1,5 @@
 const express = require('express')
+var mysql = require('mysql');
 // Find express that was installed and refer to it as variable express - Joshi
 const path = require('path')
 const app = express()
