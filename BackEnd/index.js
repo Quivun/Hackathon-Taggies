@@ -101,8 +101,8 @@ app.post("/getInfo_S",function(request,response){
           Class = '${cla}',
           Hometown = '${hometown}',
           Residence = '${living}',
-          Interest = '${interest}',
-          'Social Media' = '${sm}',
+          Interests = '${interest}',
+          "Social Media" = '${sm}',
           Biography = '${bio}'
 
       WHERE
