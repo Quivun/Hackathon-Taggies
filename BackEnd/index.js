@@ -65,18 +65,21 @@ app.post("/getInfo_S",function(request,response){
       }
     }
   );
+  connection.execSql(request);
+  }
+});
 
   app.post("/getInfo_C",function(request,response){
     console.log("Create Profile Taken");
+    var email = request.body.email;
     var name = request.body.name_myText;
     var major = request.body.major_myText;
-    var class = request.body.class_myText;
+    var cla = request.body.class_myText;
     var hometown = request.body.hometown_Text;
     var living = request.body.living_myText;
     var interest = request.body.hobby_myText;
     var sm = request.body.sm_myText;
     var bio = request.body.bio_text;
-    Blob pfp = request.body.profile_image;
 
     console.log(request.body);
 
@@ -91,8 +94,19 @@ app.post("/getInfo_S",function(request,response){
     
     // formatting of requests think tanzir terminal exec functions
     const request = new Request(
-      `INSERT INTO Users (Email,Username,Password)   
-      VALUES ('${email}','${username}','${password}');`,
+      `UPDATE Users 
+      SET 
+          Name = '${username}',
+          Major = '${major}',
+          Class = '${cla}',
+          Hometown = '${hometown}',
+          Residence = '${living}',
+          Interest = '${interest}',
+          'Social Media' = '${sm}',
+          Biography = '${bio}',
+
+      WHERE
+          Email = '${email}';`,
   
       (err, rowCount) => {
         if (err) {
@@ -107,7 +121,7 @@ app.post("/getInfo_S",function(request,response){
   connection.execSql(request);
   // GO TO THE DATABASE
   }
-})
+});
 
 
 
@@ -173,6 +187,6 @@ function queryDatabase() {
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
   console.log(`Example app listening at Port :${port}`)
-})
+});
 
 
