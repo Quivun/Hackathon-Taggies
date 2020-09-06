@@ -35,7 +35,7 @@ app.get("/getInfo",function(request,response){
       response.sendStatus(400);
       // Err0r
   } else {
-      response.sendStatus(200);
+    response.redirect('create_profile.html');
       //Succ cess
   }
 })
