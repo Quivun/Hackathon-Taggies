@@ -48,7 +48,71 @@ app.post("/getInfo",function(request,response){
       //Succ cess
   }
 })
+
+
+
+
+
+const { Connection, Request } = require("tedious");
+
+// Create connection to database
+const config = {
+  authentication: {
+    options: {
+      userName: "taggies", // update me
+      password: "password1!" // update me
+    },
+    type: "default"
+  },
+  server: "taggies-db-server.database.windows.net", // update me
+  options: {
+    database: "Taggies_DataBase", //update me
+    encrypt: true
+  }
+};
+
+const connection = new Connection(config);
+
+// Attempt to connect and execute queries if connection goes through
+connection.on("connect", err => {
+  if (err) {
+    console.error(err.message);
+  } else {
+    queryDatabase();
+  }
+});
+
+function queryDatabase() {
+  console.log("Reading rows from the Table...");
+
+  // Read all rows from table
+  
+  // formatting of requests think tanzir terminal exec functions
+  const request = new Request(
+    `SELECT * `,
+
+    (err, rowCount) => {
+      if (err) {
+        console.error(err.message);
+      } else {
+        console.log(`${rowCount} row(s) returned`);
+      }
+    }
+  );
+
+  request.on("row", columns => {
+    columns.forEach(column => {
+      console.log("%s\t%s", column.metadata.colName, column.value);
+    });
+  });
+
+  connection.execSql(request);
+}
+
+
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+
