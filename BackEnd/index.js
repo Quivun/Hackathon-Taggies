@@ -68,9 +68,6 @@ app.post("/getInfo",function(request,response){
 
   connection.execSql(request);
   // GO TO THE DATABASE
-    
-    response.redirect('create_profile.html');
-      //Succ cess
   }
 })
 
