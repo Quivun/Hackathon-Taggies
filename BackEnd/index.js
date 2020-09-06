@@ -53,7 +53,7 @@ app.post("/getInfo",function(request,response){
   // formatting of requests think tanzir terminal exec functions
   const request = new Request(
     `INSERT INTO Users (Email,Username,Password)   
-    VALUES ("${email}","${username}","${password}");`,
+    VALUES ('${email}','${username}','${password}');`,
 
     (err, rowCount) => {
       if (err) {
