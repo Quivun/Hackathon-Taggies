@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 */
+
+
+// for parsing application/json
+app.use(bodyParser.json()); 
+
+
 // for parsing application/xwww-
 app.use(bodyParser.urlencoded({ extended: true })); 
 //form-urlencoded
