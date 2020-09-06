@@ -195,13 +195,23 @@ body {
 	margin-bottom: 20px;
 }
 
-.you-message{
-	justify-content: end;
-	justify-items: end;
+.message-content{
+	display: grid;
 }
 
-.other-message{
+.you-message{
+	justify-content: end;
+
+}
+
+.you-message .message-content{
+	justify-items: end;
 	justify-content: start;
+}
+
+.other-message .message-content{
+	grid-template-columns: 48px 1fr;
+	grid-column-gap: 15px;
 }
 
 .message-text{
@@ -224,8 +234,8 @@ body {
 }
 
 .other-message .message-text{
-	background: rgba(238, 238, 238, 0.87);
-	color: #111;
+	background: #A52A2A;
+	color: #eee;
 	border: 1px solid black;
 	border-radius: 14px 14px 14px 0;
 }
