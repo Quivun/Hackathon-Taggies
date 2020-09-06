@@ -73,23 +73,26 @@
 				<!-- Content -->
 				<div id="content" class="container">
 					<section>
-						<header class="major">
-							<h2>Log In</h2>
-						</header> 
-						<p>
-				          <label>Username</label>
-				          <input type = "text"
-				                 id = "myText"
-				                 placeholder="Username" required/>
-				        </p>
-				        <p>
-				          <label>Password</label>
-				          <input type = "password"
-				                  id = "password"
-				                  placeholder= "Password" required/>
-				        </p>
-				        <a href="match_page.html" class="button alt">Log In</a>
-				        <p>Don't have an accout? <a href="signup.html">Sign Up!</a></p>
+						<form action="match_page.html" method="GET">
+							<header class="major">
+								<h2>Log In</h2>
+							</header> 
+							<p>
+							<label>Username</label>
+							<input type = "text"
+									id = "myText"
+									placeholder="Username" required/>
+							</p>
+							<p>
+							<label>Password</label>
+							<input type = "password"
+									id = "password"
+									placeholder= "Password" required/>
+							</p>
+							<!--<a href="match_page.html" class="button alt">Log In</a>-->
+							<button class= "button alt" type="submit">Log In</button>
+							<p>Don't have an accout? <a href="signup.html">Sign Up!</a></p>
+						</form>
 					</section>
 				</div>
 			</div>
