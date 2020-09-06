@@ -77,7 +77,6 @@ app.post("/getInfo_S",function(request,response){
     var interest = request.body.hobby_myText;
     var sm = request.body.sm_myText;
     var bio = request.body.bio_text;
-    Blob pfp = request.body.profile_image;
 
     console.log(request.body);
 
