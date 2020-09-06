@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
 //form-urlencoded
 
 // Can I send a body with a get request?
-
+// A : Don't send form data as a get request. But you can do funky business with it.
 
 // for parsing multipart/form-data
 app.use(upload.array()); 
