@@ -68,6 +68,7 @@ app.post("/getInfo_S",function(request,response){
 
   app.post("/getInfo_C",function(request,response){
     console.log("Create Profile Taken");
+    var email = request.body.email;
     var name = request.body.name_myText;
     var major = request.body.major_myText;
     var class = request.body.class_myText;
@@ -91,8 +92,19 @@ app.post("/getInfo_S",function(request,response){
     
     // formatting of requests think tanzir terminal exec functions
     const request = new Request(
-      `INSERT INTO Users (Email,Username,Password)   
-      VALUES ('${email}','${username}','${password}');`,
+      `UPDATE Users 
+      SET 
+          Name = '${username}',
+          Major = '${major}',
+          Class = '${class}',
+          Hometown = '${hometown}',
+          Residence = '${living}',
+          Interest = '${interest}',
+          'Social Media' = '${sm}',
+          Biography = '${bio}',
+
+      WHERE
+          Email = '${email}';`,
   
       (err, rowCount) => {
         if (err) {
