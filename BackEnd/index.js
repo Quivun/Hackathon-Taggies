@@ -26,7 +26,7 @@ app.use(upload.array());
 app.use(express.static(path.join(__dirname, "../FrontEnd")))
 
 app.get("/getInfo",function(request,response){
-
+  console.log("Sign Up Taken");
   var email = request.body.email;
   var username = request.body.myText;
   var password = request.body.password;
