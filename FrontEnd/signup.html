@@ -73,7 +73,7 @@
 				<!-- Content -->
 				<div id="content" class="container">
 					<section>
-						<form>
+						<form target="create_profile.html">
 						<header class="major">
 							<h2>Sign Up</h2>
 						</header> 
@@ -98,10 +98,11 @@
 				        <p>
 				          <label>Confirm Password</label>
 				          <input type = "password"
-				                  id = "password"
+				                  id = "confirm_password"
 				                  placeholder= "Confirm Password" required/>
 				        </p>
-				        <button class="button alt" type="submit" action="">Sign Up</button>
+				        <!--<button class="button alt" type="submit" action="">Sign Up</button>-->
+				        <input type="submit" class="button alt" value="Sign Up" formaction="create_profile.html">
 				        </form>
 					</section>
 				</div>
@@ -144,7 +145,7 @@
 			<section class="container">
 				<header class="major">
 					<h2>Connect with us</h2>
-					<span class="byline">Integer sit amet pede vel arcu aliquet pretium</span>
+					<span class="byline">Follow us on social media!</span>
 				</header>
 				<ul class="icons">
 					<li class="active"><a href="#" class="fa fa-facebook"><span>Facebook</span></a></li>
