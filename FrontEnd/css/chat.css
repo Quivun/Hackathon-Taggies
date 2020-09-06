@@ -178,7 +178,7 @@ body {
 
 #chat-title > img {
 	cursor: pointer;
-
+	
 } 
 
 #chat-message-list {
@@ -206,6 +206,9 @@ body {
 
 .you-message .message-content{
 	justify-items: end;
+}
+
+.other-message{
 	justify-content: start;
 }
 
