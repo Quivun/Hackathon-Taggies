@@ -40,7 +40,7 @@ body {
 #search-container,
 #conversation-list,
 #new-message-container {
-	background: #0048AA;
+	background: #500000;
 }
 
 #search-container {
@@ -85,13 +85,13 @@ body {
 	grid-gap: 10px;
 	color: #ddd;
 	font-size: 1.3rem;
-	border-bottom: 1px solid #002C88;
+	border-bottom: 1px solid #836161;
 	padding: 20px 20px 20px 15px;
 }
 
 .conversation.active,
 .conversation:hover {
-	background: #002C88;
+	background: #836161;
 
 }
 
@@ -148,7 +148,7 @@ body {
 	place-content: center center;
 	background: #eee;
 	border-radius: 100%;
-	color: #002C88;
+	color: #836161;
 	text-decoration: none;
 	font-size: 3.6rem;
 
@@ -167,7 +167,7 @@ body {
 	align-items: center; 
 	grid-area: chat-title;
 	
-	color: #0048AA;
+	color: #500000;
 	font-weight: bold;
 	font-size: 2.0rem;
 	border-radius: 0 10px 0 0;
