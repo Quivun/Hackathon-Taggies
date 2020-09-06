@@ -46,12 +46,19 @@
 						<!-- Content -->
 						<div id="content" class="container">
 							<section>
-								<form action="match_page.html" method="GET">
+								<form action="/getInfo_C" method="POST">
 									<header class="major">
 										<h2>Create Your Tag</h2>
 										<!--<span class="byline">Nullam non wisi a sem semper eleifend</span>-->
 									</header>
 
+									<p>
+									<label>Email</label>
+									<input type = "email"
+											id = "email"
+											name = "email"
+											placeholder="Email" required/>
+									</p>
 									<p> 
 									<label>Name</label>
 									<input type = "text"
@@ -66,9 +73,20 @@
 											name = "major_myText"
 											placeholder="ex: Computer Science" required />
 									</p>
-									<p> 
-									<label>Class (U1, U2, U3, U4)</label>
+									<p><!--
 									<label>Class</label>
+									<input type = "text"
+											id = "class_myText"
+											placeholder="ex: Freshman" required /> -->
+
+									<!-- <label for="Class">Class:</label>
+									  <select id="Class" name="Class" required>
+									    <option value="U1">U1</option>
+									    <option value="U2">U2</option>
+									    <option value="U3">U4</option>
+									    <option value="U4">U4</option>
+									  </select> -->
+									<label>Class (U1, U2, U3, U4)</label>
 									<input type = "text"
 											id = "class_myText"
 											name = "class_myText"
@@ -92,8 +110,7 @@
 									<label>Interests/Hobbies</label>
 									<input type = "text"
 											id = "hobby_myText"
-											name = "hobby_myText"
-											placeholder=""" />
+											placeholder="" />
 									</p>
 									<p> 
 									<label>Social Media</label>

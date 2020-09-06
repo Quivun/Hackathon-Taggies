@@ -100,7 +100,7 @@ app.post("/getInfo_S",function(request,response){
           console.error(err.message);
         } else {
           // If there's not, then redirect
-          response.redirect('create_profile.html');
+          response.redirect('match_page.html');
         }
       }
     );
