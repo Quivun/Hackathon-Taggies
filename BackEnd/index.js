@@ -34,6 +34,7 @@ app.use(upload.array());
 
 app.use(express.static(path.join(__dirname, "../FrontEnd")))
 
+// Query database only if the validation is successful and before the redirection
 app.post("/getInfo",function(request,response){
   console.log("Sign Up Taken");
   var email = request.body.email;
@@ -44,6 +45,30 @@ app.post("/getInfo",function(request,response){
       response.sendStatus(400);
       // Err0r
   } else {
+
+    // GO TO THE DATABASE
+    console.log("Reading rows from the Table...");
+  // Read all rows from table
+  
+  // formatting of requests think tanzir terminal exec functions
+  const request = new Request(
+    `INSERT INTO Users (Email,Username,Password)   
+    VALUES (${email},${username},${password});`,
+
+    (err, rowCount) => {
+      if (err) {
+        // If there's an error, it will log it
+        console.error(err.message);
+      } else {
+        // If there's not, then redirect
+        response.redirect('create_profile.html');
+      }
+    }
+  );
+
+  connection.execSql(request);
+  // GO TO THE DATABASE
+    
     response.redirect('create_profile.html');
       //Succ cess
   }
@@ -74,6 +99,7 @@ const config = {
 const connection = new Connection(config);
 
 // Attempt to connect and execute queries if connection goes through
+// Callback for connection, deb00gers
 connection.on("connect", err => {
   if (err) {
     console.error(err.message);
@@ -84,12 +110,11 @@ connection.on("connect", err => {
 
 function queryDatabase() {
   console.log("Reading rows from the Table...");
-
   // Read all rows from table
   
   // formatting of requests think tanzir terminal exec functions
   const request = new Request(
-    `SELECT * `,
+    `SELECT * from Users`,
 
     (err, rowCount) => {
       if (err) {
@@ -112,7 +137,7 @@ function queryDatabase() {
 
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`Example app listening at Port :${port}`)
 })
 
 
