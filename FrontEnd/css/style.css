@@ -670,7 +670,7 @@
 		padding: 6em 0em 3em 0em;
 		text-align: center;
 		text-transform: uppercase;
-		color: white;
+		color: rgb(255, 255, 255);
 	}
 
 		#banner .container {
@@ -679,6 +679,7 @@
 
 		#banner h2 {
 			display: inline-block;
+			font-family: "Arial Black", Gadget, sans-serif;
 			padding: 0.55em 0.35em;
 			background: #500000; /*center taggies*/
 			border-radius: 10px;
@@ -690,6 +691,12 @@
 			display: block;
 			letter-spacing: 1px;
 			text-transform: uppercase;
+			text-shadow:
+				-1px -1px 0 #000,
+				1px -1px 0 #000,
+				-1px 1px 0 #000,
+				1px 1px 0 #000;
+			color: #ffffff;
 			font-size: 1.6em;
 			font-weight: 300;
 		}
