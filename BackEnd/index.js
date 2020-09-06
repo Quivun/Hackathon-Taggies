@@ -104,7 +104,6 @@ app.post("/getInfo_S",function(request,response){
           Interests = '${interest}',
           "Social Media" = '${sm}',
           Biography = '${bio}'
-
       WHERE
           Email = '${email}';`,
   
