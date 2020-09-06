@@ -26,6 +26,9 @@ app.get('/', (req, res) => {
 // app.use(bodyParser.urlencoded({ extended: true })); 
 //form-urlencoded
 
+// Can I send a body with a get request?
+
+
 // for parsing multipart/form-data
 app.use(upload.array()); 
 
