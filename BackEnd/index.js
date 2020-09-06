@@ -30,7 +30,7 @@ app.get("/getInfo",function(request,response){
   var email = request.body.email;
   var username = request.body.myText;
   var password = request.body.password;
-
+  console.log(request.body);
   if (!(email)||!(username)||!(password)){
       response.sendStatus(400);
       // Err0r
