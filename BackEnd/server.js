@@ -1,3 +1,4 @@
+
 var express = require("express");
 var app = express();
 // Use the application off of express
@@ -8,13 +9,13 @@ app.get("/", function(request,response){
 });
 
 app.get("/getInfo",function(request,response){
-
+    console.log("Sign Up Taken");
     var email = request.query.email;
     var username = request.query.myText;
     var password = request.query.password;
 
     if (!(email)||!(username)||!(password)){
-        response.sendStatus(400);
+        response.redirect('create_profile.html');
         // Err0r
     } else {
         response.sendStatus(200);
