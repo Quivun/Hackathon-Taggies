@@ -21,6 +21,7 @@
 		<script src="js/skel.min.js"></script>
 		<script src="js/skel-layers.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/passwords.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -49,41 +50,46 @@
 				<!-- Content -->
 				<div id="content" class="container">
 					<section>
-						<form action="/getInfo" method='POST' enctype="multipart/form-data">
-							<header class="major">
-								<h2>Sign Up</h2>
-							</header> 
-							<p>
-							<label>Email</label>
-							<input type = "text"
-									id = "email"
-									name = "email"
-									placeholder="Email" required/>
-							</p>
-							<p>
-							<label>Create Username</label>
-							<input type = "text"
-									id = "myText"
-									name = "myText"
-									placeholder="Username" required/>
-							</p>
-							<p>
-							<label>Create Password</label>
-							<input type = "password"
-									id = "password"
-									name = "password"
-									placeholder= "Password" required/>
-							</p>
-							<p>
-							<label>Confirm Password</label>
-							<input type = "password"
-									id = "confirm_password"
-									placeholder= "Confirm Password" required/>
-							</p>
-							<button class= "button alt" type="submit">Sign Up</button>
-							<!--<button class="button alt" type="submit" action=""><a href="create_profile.html" >Sign Up</a></button>-->
-							<!--<input type="submit alt" class="button alt" value="Sign Up" formaction="create_profile.html">-->
-				        </form>
+						<form action="create_profile.html" method="GET">
+							<form action="/getInfo" method='POST' enctype="multipart/form-data">
+								<header class="major">
+									<h2>Sign Up</h2>
+								</header> 
+								<p>
+								<label>Email</label>
+								<input type = "email"
+										id = "email"
+										name = "email"
+										placeholder="Email" required/>
+								</p>
+								<p>
+								<label>Create Username</label>
+								<input type = "text"
+										id = "myText"
+										name = "myText"
+										placeholder="Username" required/>
+								</p>
+								<p>
+								<label>Create Password</label>
+								<input type = "password"
+										id = "password"
+										name = "password"
+										placeholder= "Password" 
+										pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+										title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+										required/>
+								</p>
+								<p>
+								<label>Confirm Password</label>
+								<input type = "password"
+										id = "confirm_password"
+										placeholder= "Confirm Password" required/>
+								</p>
+								<button class= "button alt" type="submit" onsubmit="Validate()">Sign Up</button>
+								<!--<button class="button alt" type="submit" action=""><a href="create_profile.html" >Sign Up</a></button>-->
+								<!--<input type="submit alt" class="button alt" value="Sign Up" formaction="create_profile.html">-->
+							</form>
+						</form>
 					</section>
 				</div>
 			</div>
