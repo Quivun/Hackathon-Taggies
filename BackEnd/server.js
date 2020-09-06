@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 // Use the application off of express
-const port = 8080
+const port = 80
 app.get("/", function(request,response){
     response.sendFile(__dirname+"../FrontEnd/signup.html");
     // Api takes a request in and shunts something back.

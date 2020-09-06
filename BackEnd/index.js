@@ -14,6 +14,20 @@ app.get('/', (req, res) => {
 
 app.use(express.static(path.join(__dirname, "../FrontEnd")))
 
+app.get("/getInfo",function(request,response){
+
+  var email = request.query.email;
+  var username = request.query.myText;
+  var password = request.query.password;
+
+  if (!(email)||!(username)||!(password)){
+      response.sendStatus(400);
+      // Err0r
+  } else {
+      response.sendStatus(200);
+      //Succ cess
+  }
+})
 // Get Request first arguement is the request ^ 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
