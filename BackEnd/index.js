@@ -35,7 +35,7 @@ app.use(upload.array());
 app.use(express.static(path.join(__dirname, "../FrontEnd")))
 
 // Query database only if the validation is successful and before the redirection
-app.post("/getInfo",function(request,response){
+app.post("/getInfo_S",function(request,response){
   console.log("Sign Up Taken");
   var email = request.body.email;
   var username = request.body.myText;
@@ -66,6 +66,44 @@ app.post("/getInfo",function(request,response){
     }
   );
 
+  app.post("/getInfo_C",function(request,response){
+    console.log("Create Profile Taken");
+    var name = request.body.name_myText;
+    var major = request.body.major_myText;
+    var class = request.body.class_myText;
+    var hometown = request.body.hometown_Text;
+    var living = request.body.living_myText;
+    var interest = request.body.hobby_myText;
+    var sm = request.body.sm_myText;
+    var bio = request.body.bio_text;
+    Blob pfp = request.body.profile_image;
+
+    console.log(request.body);
+
+    if (!(email)||!(username)||!(password)){
+        response.sendStatus(400);
+        // Err0r Would modify but it already handles
+    } else {
+  
+      // GO TO THE DATABASE
+      console.log("Reading rows from the Table...");
+    // Read all rows from table
+    
+    // formatting of requests think tanzir terminal exec functions
+    const request = new Request(
+      `INSERT INTO Users (Email,Username,Password)   
+      VALUES ('${email}','${username}','${password}');`,
+  
+      (err, rowCount) => {
+        if (err) {
+          // If there's an error, it will log it
+          console.error(err.message);
+        } else {
+          // If there's not, then redirect
+          response.redirect('create_profile.html');
+        }
+      }
+    );
   connection.execSql(request);
   // GO TO THE DATABASE
   }
