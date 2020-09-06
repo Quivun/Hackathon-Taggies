@@ -83,7 +83,7 @@ app.post("/getInfo_S",function(request,response){
 
     console.log(request.body);
 
-    if (!(email)||!(username)||!(password)){
+    if (!(email)||!(name)||!(password)){
         response.sendStatus(400);
         // Err0r Would modify but it already handles
     } else {
@@ -96,7 +96,7 @@ app.post("/getInfo_S",function(request,response){
     const request1 = new Request(
       `UPDATE Users 
       SET 
-          Name = '${username}',
+          Name = '${name}',
           Major = '${major}',
           Class = '${cla}',
           Hometown = '${hometown}',
